@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lander Pressure Washing</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
+
+    :root {
+      --primary: #234670;
+      --secondary: #92cbe6;
+      --light: #d2eef9;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'PT Sans Caption', sans-serif;
+      background-color: var(--light);
+      color: var(--primary);
+      line-height: 1.6;
+      background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.4) 5px, transparent 6px),
+                        radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.4) 8px, transparent 9px),
+                        radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.4) 6px, transparent 7px);
+      background-size: 1200px 1200px;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: var(--white);
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 1rem auto;
+      max-width: 180px; /* 120px * 1.2 = 144px */
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .nav-toggle {
+      display: none;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: var(--white);
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: var(--white);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      padding: 1rem;
+      margin: 0.25rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .services ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      list-style: none;
+    }
+
+    @media (min-width: 1024px) {
+      .services ul {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    .services li {
+      background: var(--white);
+      padding: 1.25rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .video-container video {
+      width: 50%;
+      height: 480px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .photos img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        display: none;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 1rem 0;
+        margin: 0;
+      }
+    }
+  </style>
+  <script>
+    function toggleNav() {
+      document.querySelector('nav').classList.toggle('active');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <img src="logo.png" alt="Lander Pressure Washing Logo" class="logo">
+    <h1>Lander Pressure Washing</h1>
+    <p>Clean Surfaces. Happy Spaces.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#photos">Before & After</a>
+    <a href="#video">Watch Us Work</a>
+    <a href="#estimate">Get a Quote</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center; max-width: 800px; margin: auto;">We are a locally-owned pressure washing business committed to transforming your home or business exterior. With years of experience and a passion for precision, we make your surfaces shine like new.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Services Offered</h2>
+    <ul>
+      <li>Siding</li>
+      <li>Driveways</li>
+      <li>Deck & Patio</li>
+      <li>Roof</li>
+      <li>Gutters</li>
+      <li>Commercial</li>
+    </ul>
+  </section>
+
+  <section id="photos">
+    <h2>Before & After Photos</h2>
+    <div class="photos">
+      <img src="before1.jpg" alt="Before Cleaning">
+      <img src="after1.jpg" alt="After Cleaning">
+      <img src="before2.jpg" alt="Before Cleaning">
+      <img src="after2.jpg" alt="After Cleaning">
+    </div>
+  </section>
+
+  <section id="video">
+    <h2>Watch Us Work</h2>
+    <div class="video-container">
+      <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section id="estimate">
+    <h2>Request a Free Estimate</h2>
+    <p style="text-align: center;">Please fill out the form below to request a free estimate for your pressure washing needs.</p>
+    <!-- Google Form Embed -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfhRI6eZ0CXFMCByq4avIlnrkp9kh_hlRFKswwizDDEMJBRHA/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lander Pressure Washing. All rights reserved.</p>
+  </footer>
+</body>
+</html>
